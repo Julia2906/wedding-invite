@@ -1,0 +1,50 @@
+@import url('./reset.css');
+@import url('./base.css');
+@import url('./container.css');
+
+.location-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.data {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.pre-text {
+  width: 200px;
+  text-align: right;
+  margin-bottom: 40px;
+}
+
+.location-wrapper {
+  padding: 180px 20px;
+  width: 320px;
+  border-radius: 200px;
+  background-color: #363636;
+  text-align: center;
+}
+
+.location-title {
+  color: white;
+  margin-bottom: 40px;
+}
+
+.location-text {
+  color: white;
+  margin-bottom: 30px;
+}
+
+.location-button {
+  color: #363636;
+  background-color: white;
+  border-radius: 30px;
+  padding: 20px 10px;
+}
+
+.timing-title {
+  font-size: 32px;
+  text-align: right;
+}

@@ -7,30 +7,151 @@
     <title>Homework 11</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:wght@100;400;500;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-    />
-    <link rel="stylesheet" href="./css/common.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
-    <div class="form-container">
-      <form class="search-form">
-        <input
-          class="search-input"
-          type="text"
-          placeholder="Search images..."
-          autocomplete="off"
+    <section class="invite-section">
+      <div class="container">
+        <h1 class="invitation">Запрошення на весілля</h1>
+        <p class="invitation">А & Ю</p>
+        <img
+          class="inv-image"
+          src="./img/inv-photo.jpg"
+          alt="Наше фото"
+          width="200"
+          height="300"
+          onclick="openFullScreen(this)"
         />
-        <button class="search-btn" type="submit">Search</button>
-      </form>
-      <ul class="gallery"></ul>
-      <div class="loader">Loading images, please wait...</div>
-    </div>
+        <p class="invitation">Натисніть на фото, щоб відкрити запрошення</p>
+      </div>
+    </section>
+    <section class="location-section">
+      <div class="container location-container">
+        <p class="pre-text">
+          Ми будемо щасливі розділити з вами радість події <br />
+          <span class="data">01 червня 2025</span> <br />З нагоди нашого весілля
+        </p>
+        <div class="location-wrapper">
+          <h2 class="location-title">LOCATION</h2>
+          <p class="location-text">
+            Чекаємо вас за адресою: <br />
+            Сад Мур
+          </p>
+          <a href="https://maps.google.com" class="location-button"
+            >Переглянути на мапі</a
+          >
+        </div>
+      </div>
+    </section>
+    <section class="timing-section">
+      <div class="container">
+        <h2 class="timing-title">
+          WEDDING <br />
+          PROGRAM
+        </h2>
+        <h3>13:30</h3>
+        <p>Збір гостей в ресторані</p>
+        <h3>14:00</h3>
+        <p>Початок церемонії</p>
+        <h3>23:00</h3>
+        <p>Фінал</p>
+      </div>
+    </section>
+    <section class="dresscode-section">
+      <div class="container">
+        <img src="" alt="" />
+        <h2>DRESSCODE</h2>
+        <p>
+          Нам буде особливо приємно, якщо ви підтримаєте стиль нашого весілля у
+          своїх образах
+        </p>
+        <ul>
+          <li class="dresscode-item green">зелений</li>
+          <li class="dresscode-item haki">Хакі</li>
+          <li class="dresscode-item white">Білий</li>
+          <li class="dresscode-item black">Чорний</li>
+          <li class="dresscode-item grey">Сірий</li>
+        </ul>
+      </div>
+    </section>
+    <section class="rsvp-section">
+      <div class="container">
+        <h2>Відповідь на запрошення</h2>
+        <form>
+          <label for="">Ваше ім'я та прізвище</label>
+          <input type="text" placeholder="Ваше ім'я" required />
+          <fieldset>
+            <legend>Чи зможете Ви бути присутнім?</legend>
+
+            <label
+              ><input type="radio" name="attendance" value="yes" /> Так, я
+              буду</label
+            ><br />
+            <label
+              ><input type="radio" name="attendance" value="no" /> На жаль, не
+              зможу</label
+            >
+          </fieldset>
+          <label for="">З ким Ви плануєте бути?</label>
+          <input type="text" placeholder="Ім'я" required />
+          <fieldset>
+            <legend>Якому алкоголю надаєте перевагу?</legend>
+
+            <label
+              ><input type="checkbox" name="alcohol" value="red" /> Вино
+              червоне</label
+            ><br />
+            <label
+              ><input type="checkbox" name="alcohol" value="white" /> Вино
+              біле</label
+            ><br />
+            <label
+              ><input type="checkbox" name="alcohol" value="whiskey" />
+              Віскі</label
+            ><br />
+            <label
+              ><input type="checkbox" name="alcohol" value="rum" /> Ром</label
+            ><br />
+            <label
+              ><input type="checkbox" name="alcohol" value="vodka" />
+              Горілка</label
+            >
+          </fieldset>
+
+          <button type="submit">Надіслати</button>
+        </form>
+      </div>
+    </section>
+    <section class="flowers-section">
+      <div class="container">
+        <h2>FLOWERS</h2>
+        <p>
+          Ми просимо вас не дарувати нам квіти, адже одразу після весілля ми
+          їдемо у довгоочікувану подорож і не встигнемо насолодитися цією
+          красою! Висловити ваше кохання та радість можна у вигляді пляшки вина
+          або шампанського, яке, ми обіцяємо, не зав'яне.
+        </p>
+      </div>
+    </section>
+    <section class="telegram-section">
+      <div class="container">
+        <h2>ФОТО/ВІДЕО</h2>
+        <p>
+          Також ми створили телеграм-чат нашого свята, де можна буде поділитися
+          фото та відео в день та після весілля
+        </p>
+        <a href="http://">телеграм</a>
+      </div>
+    </section>
+    <footer>
+      <p>До зустрічі!</p>
+    </footer>
     <script type="module" src="./main.js"></script>
   </body>
 </html>
