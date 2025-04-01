@@ -1,6 +1,6 @@
 :root {
   --font-family: 'Montserrat', sans-serif;
-  --font-size: 12px;
+  --font-size: 14px;
   --line-height: 24px;
   --font-weight: 400;
 
@@ -20,14 +20,14 @@ body {
   background-color: var(--background);
 }
 
-section {
+.section {
   padding-top: 40px;
   padding-bottom: 40px;
 }
 
 h2 {
   font-family: 'Cormorant Garamond', serif;
-  font-size: 32px;
+  font-size: 48px;
   font-weight: 700;
 }
 

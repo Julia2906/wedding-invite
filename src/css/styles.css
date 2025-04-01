@@ -2,6 +2,102 @@
 @import url('./base.css');
 @import url('./container.css');
 
+.invite-section {
+  display: flex;
+  background-color: #363636;
+  color: white;
+  text-align: center;
+  justify-content: center;
+  padding-bottom: 80px;
+  padding-top: 40px;
+  position: relative;
+  transition: all 0.5s ease-in-out;
+}
+
+.invite-section .container {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.no-padding {
+  padding: 0;
+}
+
+.invitation-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 32px;
+}
+
+.invitation-text {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 56px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.invitation-second-text {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 16px;
+  margin-top: 20px;
+}
+
+.inv-image {
+  cursor: pointer;
+  transition: transform 0.5s ease-in-out;
+  border: 2px solid white;
+}
+
+/* Збільшення фото після натискання */
+.expanded {
+  width: 100%; /* Зміни цей розмір, якщо потрібно більше/менше */
+  height: 100%;
+  border: none;
+}
+
+.image-text {
+  position: absolute;
+  bottom: -50px; /* Початково прихований нижче */
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  font-size: 24px;
+  font-weight: 700;
+  text-align: center;
+  padding: 10px 20px;
+  opacity: 0;
+  transition: bottom 1s ease-in-out, opacity 0.5s;
+}
+
+/* Коли з'являється */
+.image-text.visible {
+  bottom: 30px; /* Піднімається вгору */
+  opacity: 1;
+  width: max-content;
+}
+
+.inv-text-first {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 16px;
+}
+
+.inv-text-second {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 32px;
+  margin-top: 5px;
+}
+
+.inv-text-thirt {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  margin-top: 80px;
+}
+
+.section {
+  display: none;
+  opacity: 0;
+}
+
 .location-container {
   display: flex;
   flex-direction: column;
@@ -46,13 +142,24 @@
   color: #363636;
   background-color: white;
   border-radius: 30px;
-  padding: 20px 10px;
+  padding: 20px 0;
+  width: 250px;
+  align-self: center;
+  box-shadow: 0 4px 8px black;
+  transition: box-shadow 0.6s ease, transform 0.5s ease;
+}
+
+.location-button:hover,
+.location-button:focus {
+  box-shadow: 0 8px 16px black;
+  transform: scale(1.05);
 }
 
 .timing-title {
   text-align: right;
   margin-bottom: 20px;
   padding-left: 30px;
+  line-height: 1;
 }
 
 .timing-wrapper {
@@ -86,31 +193,48 @@
 .dresscode-title {
   margin-top: 20px;
   text-align: right;
+  margin-bottom: 20px;
+  line-height: 1;
 }
 
 .dresscode-section {
   background-color: #363636;
   color: white;
+  padding-bottom: 40px;
+  padding-top: 0;
+}
+
+.dresscode-section .container {
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .dresscode-text {
   text-align: right;
-  max-width: 200px;
-  margin-bottom: 20px;
+  margin-bottom: 50px;
 }
 .dresscode-list {
   display: flex;
   flex-direction: row;
-  gap: 10px;
-  flex-wrap: wrap;
+  gap: 0;
   justify-content: center;
 }
 
 .dresscode-item {
-  padding: 40px 20px;
-  width: 60px;
+  padding: 30px 20px;
+  width: 40px;
   background-color: white;
   border-radius: 50%;
+  position: relative;
+  margin-left: -15px; /* Накладання елементів */
+  z-index: 1;
+  box-shadow: 0 4px 8px #252525;
+  transition: box-shadow 0.6s ease, transform 0.5s ease;
+}
+
+.dresscode-item:hover {
+  box-shadow: 0 8px 16px #252525;
+  transform: scale(1.1);
 }
 
 .gray {
@@ -172,8 +296,9 @@
   width: 100%;
 }
 
-.underline-input:focus {
-  border-bottom: 2px solid #007bff;
+.underline-input:focus,
+.underline-input:hover {
+  border-bottom: 2px solid #363636;
 }
 
 .rsvp-check-wrapper {
@@ -189,6 +314,14 @@
   padding: 20px 10px;
   width: 200px;
   align-self: center;
+  box-shadow: 0 4px 8px #a9a9a9;
+  transition: box-shadow 0.6s ease, transform 0.5s ease;
+}
+
+.rsvp-button:hover,
+.rsvp-button:focus {
+  box-shadow: 0 8px 16px #a9a9a9;
+  transform: scale(1.05);
 }
 
 .flowers-section {
@@ -217,6 +350,14 @@
   padding: 20px 10px;
   width: 200px;
   text-align: center;
+  box-shadow: 0 4px 8px black;
+  transition: box-shadow 0.6s ease, transform 0.5s ease;
+}
+
+.telegram-button:hover,
+.telegram-button:focus {
+  box-shadow: 0 8px 16px black;
+  transform: scale(1.05);
 }
 
 .telegram-title {
