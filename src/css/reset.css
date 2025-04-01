@@ -38,3 +38,7 @@ html {
 address {
   font-style: inherit;
 }
+
+body {
+  margin: 0;
+}
