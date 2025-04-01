@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
-    <section class="invite-section">
+    <section class="invite-section section">
       <div class="container">
         <h1 class="invitation">Запрошення на весілля</h1>
         <p class="invitation">А & Ю</p>
@@ -31,12 +31,16 @@
         <p class="invitation">Натисніть на фото, щоб відкрити запрошення</p>
       </div>
     </section>
-    <section class="location-section">
+    <section class="location-section section">
       <div class="container location-container">
-        <p class="pre-text">
-          Ми будемо щасливі розділити з вами радість події <br />
-          <span class="data">01 червня 2025</span> <br />З нагоди нашого весілля
-        </p>
+        <div class="pre-text">
+          <p>
+            Ми будемо щасливі розділити з вами радість події <br />
+            <span class="data">01 червня 2025</span> <br />З нагоди нашого
+            весілля
+          </p>
+        </div>
+
         <div class="location-wrapper">
           <h2 class="location-title">LOCATION</h2>
           <p class="location-text">
@@ -49,44 +53,67 @@
         </div>
       </div>
     </section>
-    <section class="timing-section">
-      <div class="container">
+    <section class="timing-section section">
+      <div class="container timing-wrapper">
         <h2 class="timing-title">
           WEDDING <br />
           PROGRAM
         </h2>
-        <h3>13:30</h3>
-        <p>Збір гостей в ресторані</p>
-        <h3>14:00</h3>
-        <p>Початок церемонії</p>
-        <h3>23:00</h3>
-        <p>Фінал</p>
+        <ul class="timing-text-wrapper">
+          <li class="line">
+            <h3>13:30</h3>
+            <p>Збір гостей в ресторані</p>
+          </li>
+          <li class="line">
+            <h3>14:00</h3>
+            <p>Початок церемонії</p>
+          </li>
+          <li class="line">
+            <h3>23:00</h3>
+            <p>Фінал</p>
+          </li>
+        </ul>
       </div>
     </section>
-    <section class="dresscode-section">
+    <section class="dresscode-section section">
       <div class="container">
-        <img src="" alt="" />
-        <h2>DRESSCODE</h2>
-        <p>
+        <img
+          src="./img/background_photo.jpg"
+          alt="Наше фото 2"
+          width="300"
+          height="200"
+        />
+        <h2 class="dresscode-title">DRESS<br />CODE</h2>
+        <p class="dresscode-text">
           Нам буде особливо приємно, якщо ви підтримаєте стиль нашого весілля у
           своїх образах
         </p>
-        <ul>
+        <ul class="dresscode-list">
           <li class="dresscode-item green">зелений</li>
           <li class="dresscode-item haki">Хакі</li>
           <li class="dresscode-item white">Білий</li>
           <li class="dresscode-item black">Чорний</li>
-          <li class="dresscode-item grey">Сірий</li>
+          <li class="dresscode-item gray">Сірий</li>
         </ul>
       </div>
     </section>
-    <section class="rsvp-section">
-      <div class="container">
-        <h2>Відповідь на запрошення</h2>
-        <form>
+    <section class="rsvp-section section">
+      <div class="container rsvp-container">
+        <h2 class="rsvp-title">RSVP</h2>
+        <p class="rsvp-text">Просимо підтвердити вашу присутність</p>
+        <p class="rsvp-text">
+          Щоб зробити нашу подію комфортною для вас і для нас, дайте відповідь,
+          будь ласка, на кілька питань
+        </p>
+        <form class="rsvp-wrapper">
           <label for="">Ваше ім'я та прізвище</label>
-          <input type="text" placeholder="Ваше ім'я" required />
-          <fieldset>
+          <input
+            class="underline-input"
+            type="text"
+            placeholder="Ваше ім'я"
+            required
+          />
+          <fieldset class="rsvp-check-wrapper">
             <legend>Чи зможете Ви бути присутнім?</legend>
 
             <label
@@ -99,8 +126,13 @@
             >
           </fieldset>
           <label for="">З ким Ви плануєте бути?</label>
-          <input type="text" placeholder="Ім'я" required />
-          <fieldset>
+          <input
+            class="underline-input"
+            type="text"
+            placeholder="Ім'я"
+            required
+          />
+          <fieldset class="rsvp-check-wrapper">
             <legend>Якому алкоголю надаєте перевагу?</legend>
 
             <label
@@ -124,29 +156,32 @@
             >
           </fieldset>
 
-          <button type="submit">Надіслати</button>
+          <button class="rsvp-button" type="submit">Надіслати</button>
         </form>
       </div>
     </section>
-    <section class="flowers-section">
+    <section class="flowers-section section">
       <div class="container">
-        <h2>FLOWERS</h2>
-        <p>
+        <h2 class="flowers-title">FLOWERS</h2>
+        <p class="flowers-text">
           Ми просимо вас не дарувати нам квіти, адже одразу після весілля ми
           їдемо у довгоочікувану подорож і не встигнемо насолодитися цією
-          красою! Висловити ваше кохання та радість можна у вигляді пляшки вина
-          або шампанського, яке, ми обіцяємо, не зав'яне.
+          красою! <br />
+          Висловити ваше кохання та радість можна у вигляді пляшки вина або
+          шампанського, яке, ми обіцяємо, не зав'яне.
         </p>
       </div>
     </section>
-    <section class="telegram-section">
-      <div class="container">
-        <h2>ФОТО/ВІДЕО</h2>
-        <p>
+    <section class="telegram-section section">
+      <div class="container telegram-wrapper">
+        <h2 class="telegram-title">ФОТО/ВІДЕО</h2>
+        <p class="telegram-text">
           Також ми створили телеграм-чат нашого свята, де можна буде поділитися
           фото та відео в день та після весілля
         </p>
-        <a href="http://">телеграм</a>
+        <a class="telegram-button" href="http://telegram" type="button"
+          >приєднатись до чату</a
+        >
       </div>
     </section>
     <footer>

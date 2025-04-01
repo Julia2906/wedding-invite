@@ -5,6 +5,7 @@
 .location-container {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 .data {
@@ -14,12 +15,16 @@
 }
 
 .pre-text {
-  width: 200px;
+  display: flex;
+  flex-direction: column;
   text-align: right;
   margin-bottom: 40px;
+  justify-content: flex-end;
 }
 
 .location-wrapper {
+  display: flex;
+  flex-direction: column;
   padding: 180px 20px;
   width: 320px;
   border-radius: 200px;
@@ -45,6 +50,186 @@
 }
 
 .timing-title {
-  font-size: 32px;
   text-align: right;
+  margin-bottom: 20px;
+  padding-left: 30px;
+}
+
+.timing-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.timing-text-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.line {
+  position: relative;
+  padding-left: 100px; /* місце для лінії */
+  margin: 20px 0;
+}
+
+.line::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 12px;
+  width: 80px;
+  height: 1px;
+  background-color: black;
+}
+
+.dresscode-title {
+  margin-top: 20px;
+  text-align: right;
+}
+
+.dresscode-section {
+  background-color: #363636;
+  color: white;
+}
+
+.dresscode-text {
+  text-align: right;
+  max-width: 200px;
+  margin-bottom: 20px;
+}
+.dresscode-list {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.dresscode-item {
+  padding: 40px 20px;
+  width: 60px;
+  background-color: white;
+  border-radius: 50%;
+}
+
+.gray {
+  background-color: #a9a9a9;
+  color: #a9a9a9;
+}
+
+.green {
+  background-color: #006600;
+  color: #006600;
+}
+
+.haki {
+  background-color: #739900;
+  color: #739900;
+}
+
+.black {
+  background-color: black;
+  color: black;
+}
+
+.white {
+  background-color: white;
+  color: white;
+}
+
+.rsvp-section {
+  background-color: #363636;
+}
+
+.rsvp-container {
+  background-color: white;
+  border-radius: 200px;
+  padding: 120px 20px;
+  text-align: center;
+}
+
+.rsvp-title {
+  font-size: 46px;
+  margin-bottom: 40px;
+}
+
+.rsvp-text {
+  margin-bottom: 20px;
+}
+
+.rsvp-wrapper {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  gap: 20px;
+}
+
+.underline-input {
+  border: none;
+  border-bottom: 2px solid #a9a9a9;
+  outline: none;
+  width: 100%;
+}
+
+.underline-input:focus {
+  border-bottom: 2px solid #007bff;
+}
+
+.rsvp-check-wrapper {
+  border: none;
+  padding: 10px 0 10px 0;
+}
+
+.rsvp-button {
+  color: #363636;
+  background-color: white;
+  border-radius: 30px;
+  border: 2px solid #a9a9a9;
+  padding: 20px 10px;
+  width: 200px;
+  align-self: center;
+}
+
+.flowers-section {
+  background-color: #363636;
+  background: url('../img/flowers-background.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding-bottom: 20px;
+}
+
+.flowers-title {
+  font-size: 46px;
+  margin-bottom: 40px;
+}
+
+.flowers-text {
+  font-size: 14px;
+}
+
+.telegram-button {
+  color: white;
+  background-color: #363636;
+  border-radius: 30px;
+  padding: 20px 10px;
+  width: 200px;
+  text-align: center;
+}
+
+.telegram-title {
+  font-size: 46px;
+  margin-bottom: 20px;
+}
+
+.telegram-text {
+  margin-bottom: 20px;
+}
+
+.telegram-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
