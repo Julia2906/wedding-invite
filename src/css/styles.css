@@ -14,11 +14,6 @@
   height: 100vh;
 }
 
-.invite-section .container {
-  padding-left: 0;
-  padding-right: 0;
-}
-
 .no-padding {
   padding: 0;
 }
@@ -203,11 +198,6 @@
   color: white;
   padding-bottom: 40px;
   padding-top: 0;
-}
-
-.dresscode-section .container {
-  padding-left: 0;
-  padding-right: 0;
 }
 
 .dresscode-text {
