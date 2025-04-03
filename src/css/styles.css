@@ -365,3 +365,13 @@
   flex-direction: column;
   align-items: flex-start;
 }
+
+.goodbye-section {
+  background-color: #363636;
+  color: white;
+}
+
+.goodbye-text {
+  align-self: center;
+  text-align: center;
+}
