@@ -151,6 +151,13 @@
   transform: scale(1.05);
 }
 
+.timing-section {
+  background-image: url('../img/background-timing.png');
+  background-size: contain; /* Підганяє за розміром */
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 .timing-title {
   text-align: right;
   margin-bottom: 20px;
@@ -332,6 +339,13 @@
 
 .flowers-text {
   font-size: 14px;
+}
+
+.telegram-section {
+  background-image: url('../img/background-telegram.png');
+  background-size: contain; /* Підганяє за розміром */
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .telegram-button {
