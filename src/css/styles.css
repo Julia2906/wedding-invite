@@ -153,7 +153,7 @@
 
 .timing-section {
   background-image: url('../img/background-timing.png');
-  background-size: contain; /* Підганяє за розміром */
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
@@ -343,7 +343,7 @@
 
 .telegram-section {
   background-image: url('../img/background-telegram.png');
-  background-size: contain; /* Підганяє за розміром */
+  background-size: cover; /* Підганяє за розміром */
   background-position: center;
   background-repeat: no-repeat;
 }
