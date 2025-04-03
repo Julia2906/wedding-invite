@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const otherSections = document.querySelectorAll(
     '.section:not(#inviteSection)'
   );
+  const audio = document.getElementById('weddingMusic');
 
   // Ховаємо всі інші секції при завантаженні
   otherSections.forEach(sec => {
@@ -33,6 +34,12 @@ document.addEventListener('DOMContentLoaded', function () {
       setTimeout(() => {
         textOverlay.classList.add('visible');
       }, 100);
+    }
+
+    if (audio.paused) {
+      audio.play(); // Вмикає музику
+    } else {
+      audio.pause(); // Зупиняє музику, якщо натиснути ще раз
     }
 
     // Показуємо інші секції з плавною анімацією
