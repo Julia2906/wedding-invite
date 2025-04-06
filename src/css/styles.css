@@ -4,14 +4,13 @@
 
 .invite-section {
   display: flex;
-  background-color: #363636;
+  background-color: #233115;
   color: white;
   text-align: center;
   justify-content: center;
   padding-top: 40px;
   position: relative;
   transition: all 0.5s ease-in-out;
-  height: 100vh;
 }
 
 .no-padding {
@@ -120,7 +119,7 @@
   padding: 180px 20px;
   width: 320px;
   border-radius: 200px;
-  background-color: #363636;
+  background-color: #233115;
   text-align: center;
 }
 
@@ -135,7 +134,7 @@
 }
 
 .location-button {
-  color: #363636;
+  color: 233115;
   background-color: white;
   border-radius: 30px;
   padding: 20px 0;
@@ -201,7 +200,7 @@
 }
 
 .dresscode-section {
-  background-color: #363636;
+  background-color: #233115;
   color: white;
   padding-bottom: 40px;
   padding-top: 0;
@@ -236,8 +235,8 @@
 }
 
 .gray {
-  background-color: #a9a9a9;
-  color: #a9a9a9;
+  background-color: #abb3ab;
+  color: #abb3ab;
 }
 
 .green {
@@ -256,12 +255,12 @@
 }
 
 .white {
-  background-color: white;
-  color: white;
+  background-color: #fefae0;
+  color: #fefae0;
 }
 
 .rsvp-section {
-  background-color: #363636;
+  background-color: #233115;
 }
 
 .rsvp-container {
@@ -350,7 +349,7 @@
 
 .telegram-button {
   color: white;
-  background-color: #363636;
+  background-color: #233115;
   border-radius: 30px;
   padding: 20px 10px;
   width: 200px;
@@ -381,7 +380,7 @@
 }
 
 .goodbye-section {
-  background-color: #363636;
+  background-color: #233115;
   color: white;
 }
 
