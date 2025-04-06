@@ -53,3 +53,43 @@ document.addEventListener('DOMContentLoaded', function () {
     }, 1000); // Невелика затримка для красивого ефекту
   });
 });
+
+const countdownEl = document.getElementById('countdown');
+
+// Встанови свою дату події тут:
+const eventDate = new Date('2025-06-01T13:30:00').getTime();
+
+// Функція для додавання нуля на початку
+function formatTime(num) {
+  return num < 10 ? '0' + num : num;
+}
+
+const timer = setInterval(() => {
+  const now = new Date().getTime();
+  const distance = eventDate - now;
+
+  if (distance < 0) {
+    clearInterval(timer);
+    countdownEl.innerHTML = 'Подія вже почалась!';
+    return;
+  }
+
+  const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  const hours = Math.floor(
+    (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+  );
+  const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  // Форматуємо час
+  const formattedDays = formatTime(days);
+  const formattedHours = formatTime(hours);
+  const formattedMinutes = formatTime(minutes);
+  const formattedSeconds = formatTime(seconds);
+
+  // Оновлюємо елементи на сторінці
+  document.getElementById('days').innerHTML = formattedDays;
+  document.getElementById('hours').innerHTML = formattedHours;
+  document.getElementById('minutes').innerHTML = formattedMinutes;
+  document.getElementById('seconds').innerHTML = formattedSeconds;
+}, 1000);

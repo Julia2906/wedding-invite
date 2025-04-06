@@ -338,7 +338,7 @@
 }
 
 .flowers-section {
-  background-color: #363636;
+  background-color: #233115;
   background: url('../img/flowers-background.jpg');
   background-repeat: no-repeat;
   background-size: cover;
@@ -403,4 +403,36 @@
 .goodbye-text {
   align-self: center;
   text-align: center;
+}
+
+.timer-section {
+  text-align: center;
+}
+
+.countdown {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.time-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.time-num {
+  font-size: 32px;
+  font-weight: bold;
+  color: #233115;
+}
+
+.time-label {
+  font-size: 16px;
+  color: #555;
+  margin-top: 5px;
+}
+
+.timer-title {
+  margin-bottom: 40px;
 }
