@@ -93,3 +93,39 @@ const timer = setInterval(() => {
   document.getElementById('minutes').innerHTML = formattedMinutes;
   document.getElementById('seconds').innerHTML = formattedSeconds;
 }, 1000);
+
+document.addEventListener('DOMContentLoaded', () => {
+  const form = document.getElementById('rsvp-form');
+
+  form.addEventListener('submit', async function (e) {
+    e.preventDefault();
+
+    const formData = new FormData(form);
+    const data = {
+      fullname: formData.get('fullname'),
+      attendance: formData.get('attendance'),
+      partner: formData.get('partner'),
+      alcohol: formData.getAll('alcohol').join(', '),
+    };
+
+    fetch(
+      'https://script.google.com/macros/s/AKfycbyxyHO_mKlm-7Z6O1ASAUM615nSY8CrPbPHakoNUhSR3ObHVSrhFtanQnReHwFllUFQ/exec',
+      {
+        method: 'POST',
+        body: JSON.stringify(data),
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      }
+    )
+      .then(res => res.json())
+      .then(res => {
+        alert('Форма успішно надіслана!');
+        form.reset();
+      })
+      .catch(err => {
+        alert('Помилка при надсиланні.');
+        console.error(err);
+      });
+  });
+});
