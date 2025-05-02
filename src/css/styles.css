@@ -39,7 +39,6 @@
 
 .inv-image {
   cursor: pointer;
-  border: 2px solid white;
   transition: all 0.8s ease;
   object-fit: cover;
   display: block;
@@ -48,10 +47,8 @@
 
 /* Збільшення фото після натискання */
 .inv-image.expanded {
-  width: 100%;
-  height: auto;
-  max-width: 600px; /* максимальна ширина */
-  border: none;
+  width: 100vh;
+  height: 100vb;
 }
 
 .invite-section .container {
