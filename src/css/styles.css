@@ -47,7 +47,7 @@
 
 /* Збільшення фото після натискання */
 .inv-image.expanded {
-  width: 100%;
+  width: 100vi;
   height: 100vb;
   border: none;
 }
