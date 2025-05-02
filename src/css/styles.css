@@ -39,6 +39,7 @@
 
 .inv-image {
   cursor: pointer;
+  border: 2px solid white;
   transition: all 0.8s ease;
   object-fit: cover;
   display: block;
@@ -49,6 +50,7 @@
 .inv-image.expanded {
   width: 100%;
   height: 100vb;
+  border: none;
 }
 
 .invite-section .container {
