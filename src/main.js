@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function () {
       let textOverlay = document.createElement('div');
       textOverlay.classList.add('image-text');
       textOverlay.innerHTML =
-        '<p class="inv-text-first"> WEDDING DAY</p>  <p class="inv-text-second">ANDRIY & JULIA</p> <p class="inv-text-thirt">ГОРТАЙТЕ НИЖЧЕ</p>';
+        '<p class="inv-text-first"> WEDDING DAY</p>  <p class="inv-text-second">Andriy & Yulia</p> <p class="inv-text-thirt">ГОРТАЙТЕ НИЖЧЕ</p>';
       section.appendChild(textOverlay);
 
       // Додаємо клас для анімації

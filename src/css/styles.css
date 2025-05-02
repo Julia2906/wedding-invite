@@ -24,9 +24,9 @@
 }
 
 .invitation-text {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: 'Pinyon Script', cursive;
   font-size: 56px;
-  font-weight: 700;
+  font-weight: 500;
   margin-top: 40px;
   margin-bottom: 40px;
 }
@@ -81,7 +81,8 @@
 }
 
 .inv-text-second {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: 'Pinyon Script', cursive;
+  font-weight: 400;
   font-size: 46px;
   margin-top: 20px;
 }
