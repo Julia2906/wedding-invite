@@ -262,8 +262,8 @@
 }
 
 .haki {
-  background-color: #739900;
-  color: #739900;
+  background-color: #4f6815;
+  color: #4f6815;
 }
 
 .black {
@@ -274,6 +274,10 @@
 .white {
   background-color: #fefae0;
   color: #fefae0;
+}
+.beige {
+  background-color: #cdb89d;
+  color: #cdb89d;
 }
 
 .rsvp-section {
