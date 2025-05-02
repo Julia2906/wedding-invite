@@ -18,31 +18,25 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     section.classList.add('no-padding');
-
-    // Додаємо клас для збільшення фото
+    // Збільшення фото
     image.classList.add('expanded');
 
-    // Перевіряємо, чи вже є текст, якщо ні — додаємо
-    if (!document.querySelector('.image-text')) {
-      let textOverlay = document.createElement('div');
-      textOverlay.classList.add('image-text');
-      textOverlay.innerHTML =
-        '<p class="inv-text-first"> WEDDING DAY</p>  <p class="inv-text-second">Andriy & Yulia</p> <p class="inv-text-thirt">ГОРТАЙТЕ НИЖЧЕ</p>';
-      section.appendChild(textOverlay);
+    // Додаємо текст
+    let textOverlay = document.createElement('div');
+    textOverlay.classList.add('image-text');
+    textOverlay.innerHTML =
+      '<p class="inv-text-first"> WEDDING DAY</p>  <p class="inv-text-second">Andriy & Yulia</p> <p class="inv-text-thirt">ГОРТАЙТЕ НИЖЧЕ</p>';
+    section.appendChild(textOverlay);
 
-      // Додаємо клас для анімації
-      setTimeout(() => {
-        textOverlay.classList.add('visible');
-      }, 100);
-    }
+    setTimeout(() => {
+      textOverlay.classList.add('visible');
+    }, 100);
 
+    // Музика
     if (audio.paused) {
       audio.play(); // Вмикає музику
-    } else {
-      audio.pause(); // Зупиняє музику, якщо натиснути ще раз
     }
 
-    // Показуємо інші секції з плавною анімацією
     setTimeout(() => {
       otherSections.forEach(sec => {
         sec.style.display = 'block';
@@ -50,16 +44,15 @@ document.addEventListener('DOMContentLoaded', function () {
         sec.style.transition = 'opacity 1s ease-in-out';
         setTimeout(() => (sec.style.opacity = '1'), 50);
       });
-    }, 1000); // Невелика затримка для красивого ефекту
+    }, 1000);
   });
 });
 
 const countdownEl = document.getElementById('countdown');
 
-// Встанови свою дату події тут:
+// Таймер
 const eventDate = new Date('2025-06-01T13:30:00').getTime();
 
-// Функція для додавання нуля на початку
 function formatTime(num) {
   return num < 10 ? '0' + num : num;
 }
@@ -81,51 +74,42 @@ const timer = setInterval(() => {
   const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
   const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-  // Форматуємо час
   const formattedDays = formatTime(days);
   const formattedHours = formatTime(hours);
   const formattedMinutes = formatTime(minutes);
   const formattedSeconds = formatTime(seconds);
 
-  // Оновлюємо елементи на сторінці
   document.getElementById('days').innerHTML = formattedDays;
   document.getElementById('hours').innerHTML = formattedHours;
   document.getElementById('minutes').innerHTML = formattedMinutes;
   document.getElementById('seconds').innerHTML = formattedSeconds;
 }, 1000);
 
-document.addEventListener('DOMContentLoaded', () => {
-  const form = document.getElementById('rsvp-form');
+// Форма RSVP
+document.getElementById('rsvp-form').addEventListener('submit', function (e) {
+  e.preventDefault();
 
-  form.addEventListener('submit', async function (e) {
-    e.preventDefault();
+  const form = e.target;
 
-    const formData = new FormData(form);
-    const data = {
-      fullname: formData.get('fullname'),
-      attendance: formData.get('attendance'),
-      partner: formData.get('partner'),
-      alcohol: formData.getAll('alcohol').join(', '),
-    };
+  const fullname = form.fullname.value.trim();
+  const attendance = form.attendance.value;
+  const partner = form.partner.value.trim();
 
-    fetch(
-      'https://script.google.com/macros/s/AKfycbyxyHO_mKlm-7Z6O1ASAUM615nSY8CrPbPHakoNUhSR3ObHVSrhFtanQnReHwFllUFQ/exec',
-      {
-        method: 'POST',
-        body: JSON.stringify(data),
-        headers: {
-          'Content-Type': 'application/json',
-        },
-      }
-    )
-      .then(res => res.json())
-      .then(res => {
-        alert('Форма успішно надіслана!');
-        form.reset();
-      })
-      .catch(err => {
-        alert('Помилка при надсиланні.');
-        console.error(err);
-      });
-  });
+  const alcoholInputs = form.querySelectorAll('input[name="alcohol"]:checked');
+  const alcohol = Array.from(alcoholInputs).map(input => input.value);
+
+  const formData = {
+    fullname,
+    attendance,
+    partner,
+    alcohol,
+    submittedAt: new Date().toISOString(),
+  };
+
+  const savedRSVPs = JSON.parse(localStorage.getItem('rsvpList')) || [];
+  savedRSVPs.push(formData);
+  localStorage.setItem('rsvpList', JSON.stringify(savedRSVPs));
+
+  form.reset();
+  alert('Дякуємо! Ваші дані збережено.');
 });

@@ -39,14 +39,18 @@
 
 .inv-image {
   cursor: pointer;
-  transition: transform 0.5s ease-in-out;
   border: 2px solid white;
+  transition: all 0.8s ease;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
 }
 
 /* Збільшення фото після натискання */
-.expanded {
-  width: 100%; /* Зміни цей розмір, якщо потрібно більше/менше */
-  height: 100%;
+.inv-image.expanded {
+  width: 100%;
+  height: auto;
+  max-width: 600px; /* максимальна ширина */
   border: none;
 }
 
@@ -384,7 +388,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding-bottom: 40px;
+  padding-top: 20px;
 }
 
 .goodbye-section {
@@ -393,6 +397,8 @@
 }
 
 .goodbye-text {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 46px;
   align-self: center;
   text-align: center;
 }
@@ -428,5 +434,7 @@
 }
 
 .timer-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 46px;
   margin-bottom: 40px;
 }
