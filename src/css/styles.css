@@ -41,7 +41,6 @@
   cursor: pointer;
   border: 2px solid white;
   transition: all 0.8s ease;
-  object-fit: cover;
   display: block;
   margin: 0 auto;
 }
